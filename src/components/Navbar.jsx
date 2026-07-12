@@ -16,7 +16,7 @@ export default function Navbar() {
       px-6 py-3
       flex items-center justify-between
       rounded-full
-      bg-indigo-950/50
+      bg-indigo-950/40
       backdrop-blur-xl
       border border-indigo-900/35
       opacity-30%

@@ -1,33 +1,41 @@
 import { ArrowRight, Download } from "lucide-react";
-
+import avatar from '../assets/avatar.png'
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#eef2ff]">
+    <section className="relative min-h-screen overflow-hidden bg-indigo-200 flex items-center">
 
-      <div className="mx-auto flex min-h-screen max-w-7xl items-center justify-between px-10">
+      <div className="mx-auto flex flex-col md:flex-row min-h-screen max-w-7xl items-center justify-between px-6 md:px-10 py-20 md:py-0 gap-10">
+        
+        {/* Left: Avatar */}
+        <div className="flex justify-start items-end max-w-sm md:max-w-lg lg:max-w-xl w-full self-end">
+          <img 
+            src={avatar} 
+            alt="Abhishek Bhatt" 
+            className="max-h-[50vh] md:max-h-[80vh] lg:max-h-[90vh] w-auto object-contain" 
+          />
+        </div>
 
-        {/* Left */}
+        {/* Right: Text */}
+        <div className="max-w-xl flex flex-col justify-center ">
 
-        <div className="max-w-xl">
-            
-          <h1 className="text-7xl font-black leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight text-indigo-950">
             Abhishek
             <br />
             Bhatt
           </h1>
 
-          <h2 className="mt-4 bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-4xl font-bold text-transparent">
+          <h2 className="mt-4 bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-2xl md:text-3xl lg:text-4xl font-bold text-transparent">
             Full Stack Java Developer
           </h2>
 
-          <p className="mt-8 text-lg leading-8 text-gray-600">
+          <p className="mt-6 text-base md:text-lg leading-relaxed text-gray-700">
             I build scalable backend systems with Spring Boot,
             React and modern cloud technologies.
           </p>
 
-          <div className="mt-10 flex gap-5">
+          <div className="mt-8 md:mt-10 flex flex-wrap gap-4">
 
-            <button className="flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 font-semibold text-white shadow-xl">
+            <button className="flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 md:px-8 md:py-4 font-semibold text-white shadow-xl hover:opacity-90 transition cursor-pointer">
 
               View Projects
 
@@ -35,7 +43,7 @@ export default function Hero() {
 
             </button>
 
-            <button className="flex items-center gap-2 rounded-full border-2 border-blue-500 px-8 py-4 font-semibold">
+            <button className="flex items-center gap-2 rounded-full border-2 border-blue-500 px-6 py-3 md:px-8 md:py-4 font-semibold text-indigo-950 hover:bg-blue-500/10 transition cursor-pointer">
 
               <Download size={18} />
 
@@ -46,24 +54,6 @@ export default function Hero() {
           </div>
 
         </div>
-
-        {/* Right */}
-
-        <div className="relative">
-
-          <div className="flex h-[420px] w-[420px] items-center justify-center rounded-[90px] bg-gradient-to-br from-cyan-300 via-blue-400 to-purple-500 rotate-12 shadow-2xl">
-
-            <h1 className="rotate-[-12deg] text-8xl font-black text-white">
-              {"</>"}
-            </h1>
-
-          </div>
-          <div className="absolute -left-10 top-10 h-12 w-12 rounded-full bg-pink-400" />
-
-          <div className="absolute bottom-0 left-0 h-8 w-8 rounded-full bg-yellow-400" />
-
-        </div>
-
       </div>
 
     </section>
