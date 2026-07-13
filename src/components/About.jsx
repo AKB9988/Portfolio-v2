@@ -8,8 +8,8 @@ export default function About() {
         >
 
             <div className="bg-black/65  min-h-screen w-full pt-32 flex justify-between pl-20">
-                <div className="w-full lg:w-[45%] flex flex-col text-left mt-10">
-
+                <div className="w-full lg:w-[45%] flex flex-col text-left mt-5">
+                    <h1 className='text-5xl font-bold text-white '>About Me</h1>
                     <p className="text-slate-300 mt-6 leading-relaxed text-lg">
                         I am a backend-focused developer and tech enthusiast from IIIT Sonepat. I specialize in building full-stack applications, REST APIs, and Android systems that solve real problems — not just tutorial clones.
 
