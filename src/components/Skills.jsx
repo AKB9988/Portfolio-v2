@@ -22,7 +22,7 @@ const TECHS = [
   { title: "Mobile", icon: <FaMobileAlt className="text-lime-400 text-3xl" />, techs: ["Android (Java)", "XML", "MQTT"] },
   { title: "Tools", icon: <FaTools className="text-orange-400 text-3xl" />, techs: ["Git", "GitHub", "Postman", "Maven", "VS Code", "IntelliJ IDEA", "Android Studio"] },
   { title: "Projects", icon: <FaFolderOpen className="text-sky-400 text-3xl" />, techs: ["GoldGuild", "AlertX", "Portfolio"] },
-  { title: "Hint", icon: <FaRegLightbulb className="text-white text-3xl" />, techs: ["Press any key", "to explore", "my technical skills"] },
+  { title: "Hint", icon: <FaRegLightbulb className="text-white text-3xl" />, techs: ["Press any key to explore my technical skills"] },
   { title: "Resume", icon: <FaFileAlt className="text-red-400 text-3xl" />, techs: ["Download PDF", "Education", "Achievements"] },
 ];
 
