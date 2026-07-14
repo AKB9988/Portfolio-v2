@@ -84,7 +84,7 @@ export default function Skills() {
         <div className="w-20 h-2 rounded-full bg-slate-700 mx-auto mt-4" />
 
         
-        <div className="mx-5 mt-5 h-56 rounded-3xl bg-indigo-200  w-80 h-70">
+        <div className="mx-5 mt-5 h-56 bg-indigo-200  w-80 h-70">
 
           
           <SkillCard heading={selectedTech.title} techs={selectedTech.techs} icon={selectedTech.icon}/>
