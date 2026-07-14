@@ -15,7 +15,7 @@ export default function SkillCard({ heading, techs, icon }) {
 
      
       <p className="text-center text-sm text-slate-600 mt-2">
-        {techs.length} Technologies
+        {techs.length} {techs.length === 1 ? "item" : "items"}
       </p>
 
      

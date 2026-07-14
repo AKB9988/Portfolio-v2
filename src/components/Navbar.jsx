@@ -2,10 +2,27 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
-const navItems = ["About", "Skills", "Education", "Projects"];
+
+const navItems = [
+  { label: "About",    href: "#about" },
+  { label: "Skills",   href: "#skills" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact",  href: "#contact" },
+];
+
+
+const socialLinks = [
+  { icon: <FaGithub />,   href: "https://github.com/AKB9988",              label: "GitHub" },
+  { icon: <FaLinkedin />, href: "https://www.linkedin.com/in/abhishek-kumar-bhatt-37b801340/",     label: "LinkedIn" },
+  { icon: <FaEnvelope />, href: "mailto:bhattak.iiits.100@gmail.com",            label: "Email" },
+];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  function handleNavClick() {
+    setIsOpen(false);
+  }
 
   return (
     <nav
@@ -19,46 +36,54 @@ export default function Navbar() {
       bg-indigo-950/40
       backdrop-blur-xl
       border border-indigo-900/35
-      opacity-30%
       shadow-[0_8px_32px_rgba(5,1,28,0.3)]
       "
     >
-      <h1 className="text-xl md:text-2xl font-extrabold whitespace-nowrap cursor-pointer bg-gradient-to-r from-sky-400 via-teal-300 to-indigo-400 bg-clip-text text-transparent hover:opacity-85 transition-opacity">
+      <a
+        href="#hero"
+        className="text-xl md:text-2xl font-extrabold whitespace-nowrap bg-gradient-to-r from-sky-400 via-teal-300 to-indigo-400 bg-clip-text text-transparent hover:opacity-85 transition-opacity"
+      >
         Abhishek Bhatt
-      </h1>
+      </a>
 
+      
       <ul className="hidden md:flex items-center gap-6">
         {navItems.map((item) => (
-          <li
-            key={item}
-            className="cursor-pointer rounded-full px-4 py-2 font-semibold text-indigo-100 transition-all duration-300 hover:bg-indigo-900/45 hover:text-sky-300"
-          >
-            {item}
+          <li key={item.label}>
+            <a
+              href={item.href}
+              className="cursor-pointer rounded-full px-4 py-2 font-semibold text-indigo-100 transition-all duration-300 hover:bg-indigo-900/45 hover:text-sky-300"
+            >
+              {item.label}
+            </a>
           </li>
         ))}
       </ul>
 
-      <div className="hidden md:flex items-center gap-5 text-xl text-indigo-200">
-        <div className="cursor-pointer rounded-full px-2 py-2 font-semibold text-indigo-100 transition-all duration-300 hover:bg-indigo-900/45 hover:text-sky-300">
-
-        <FaGithub className="cursor-pointer transition hover:text-sky-300" />
-        </div>
-        <div className="cursor-pointer rounded-full px-2 py-2 font-semibold text-indigo-100 transition-all duration-300 hover:bg-indigo-900/45 hover:text-sky-300">
-
-        <FaLinkedin className="cursor-pointer transition hover:text-sky-300" />
-        </div>
-        <div className="cursor-pointer rounded-full px-2 py-2 font-semibold text-indigo-100 transition-all duration-300 hover:bg-indigo-900/45 hover:text-sky-300">
-
-        <FaEnvelope className="cursor-pointer transition hover:text-sky-300" />
-        </div>
+   
+      <div className="hidden md:flex items-center gap-2 text-xl text-indigo-200">
+        {socialLinks.map((social) => (
+          <a
+            key={social.label}
+            href={social.href}
+            target={social.href.startsWith("mailto") ? "_self" : "_blank"}
+            rel="noopener noreferrer"
+            aria-label={social.label}
+            className="rounded-full p-2 transition-all duration-300 hover:bg-indigo-900/45 hover:text-sky-300"
+          >
+            {social.icon}
+          </a>
+        ))}
       </div>
 
-      <button
+      {/* <a
+        href="#contact"
         className="hidden md:flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-gradient-to-r from-sky-400 to-indigo-500 hover:from-sky-300 hover:to-indigo-400 text-white font-semibold shadow-md shadow-sky-500/10 hover:shadow-sky-500/20 active:scale-95 transition-all duration-300 text-sm cursor-pointer"
       >
         Say Hi
-      </button>
+      </a> */}
 
+    
       <button
         className="md:hidden rounded-full p-2 text-indigo-200 transition hover:bg-indigo-900/45 hover:text-sky-300"
         onClick={() => setIsOpen(!isOpen)}
@@ -85,32 +110,45 @@ export default function Navbar() {
         >
           <ul className="flex flex-col p-4 gap-1">
             {navItems.map((item) => (
-              <li
-                key={item}
-                className="
-                cursor-pointer
-                rounded-xl
-                px-5 py-3
-                text-lg
-                font-semibold
-                text-indigo-200
-                transition-all
-                duration-300
-                hover:bg-indigo-900/50
-                hover:text-sky-300
-                "
-              >
-                {item}
+              <li key={item.label}>
+                <a
+                  href={item.href}
+                  onClick={handleNavClick}
+                  className="
+                  block
+                  cursor-pointer
+                  rounded-xl
+                  px-5 py-3
+                  text-lg
+                  font-semibold
+                  text-indigo-200
+                  transition-all
+                  duration-300
+                  hover:bg-indigo-900/50
+                  hover:text-sky-300
+                  "
+                >
+                  {item.label}
+                </a>
               </li>
             ))}
           </ul>
 
-          <div className="mx-4 border-t border-indigo-900/40"></div>
+          <div className="mx-4 border-t border-indigo-900/40" />
 
           <div className="flex justify-center gap-8 py-5 text-xl text-indigo-200">
-            <FaGithub className="cursor-pointer transition hover:text-sky-300" />
-            <FaLinkedin className="cursor-pointer transition hover:text-sky-300" />
-            <FaEnvelope className="cursor-pointer transition hover:text-sky-300" />
+            {socialLinks.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target={social.href.startsWith("mailto") ? "_self" : "_blank"}
+                rel="noopener noreferrer"
+                aria-label={social.label}
+                className="transition hover:text-sky-300"
+              >
+                {social.icon}
+              </a>
+            ))}
           </div>
         </div>
       )}

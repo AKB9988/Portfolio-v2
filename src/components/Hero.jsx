@@ -34,23 +34,23 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 md:mt-10 flex flex-wrap gap-4">
-
-            <button className="flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 md:px-8 md:py-4 font-semibold text-white shadow-xl hover:opacity-90 transition cursor-pointer">
-
+            <a 
+              href="#projects"
+              className="flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 md:px-8 md:py-4 font-semibold text-white shadow-xl hover:opacity-90 transition cursor-pointer"
+            >
               View Projects
-
               <ArrowRight size={20} />
+            </a>
 
-            </button>
-
-            <button className="flex items-center gap-2 rounded-full border-2 border-blue-500 px-6 py-3 md:px-8 md:py-4 font-semibold text-indigo-950 hover:bg-blue-500/10 transition cursor-pointer">
-
+            <a 
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-full border-2 border-blue-500 px-6 py-3 md:px-8 md:py-4 font-semibold text-indigo-950 hover:bg-blue-500/10 transition cursor-pointer"
+            >
               <Download size={18} />
-
               Resume
-
-            </button>
-
+            </a>
           </div>
 
         </div>

@@ -5,9 +5,9 @@ export default function ProjectCard({ project }) {
   const { title, tagline, description, stack, tags, githubUrl, liveUrl, accentColor, highlights } = project;
 
   return (
-    <div className="w-full flex flex-col h-full">
+    <div className="w-full flex flex-col flex-1">
       <div
-        className="flex-1 rounded-b-2xl p-6 md:p-8 overflow-y-auto"
+        className="flex-1 rounded-b-2xl p-6 md:p-8 lg:p-10 overflow-y-auto"
         style={{ background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)" }}
       >
         <div className="flex items-start justify-between gap-4 flex-wrap">
@@ -66,7 +66,7 @@ export default function ProjectCard({ project }) {
 
         <p className="text-slate-400 text-sm leading-relaxed">{description}</p>
 
-        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {highlights.map((item, i) => (
             <div
               key={i}

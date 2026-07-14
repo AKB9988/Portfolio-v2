@@ -124,7 +124,7 @@ export default function Projects() {
         </p>
       </div>
 
-      
+
       <div className="max-w-6xl w-full overflow-hidden rounded-t-xl rounded-b-lg shadow-[0_30px_80px_rgba(0,0,0,0.7)] border border-slate-700/50">
 
         <div
