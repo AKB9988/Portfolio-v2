@@ -7,7 +7,7 @@ export default function ProjectCard({ project }) {
   return (
     <div className="w-full flex flex-col flex-1">
       <div
-        className="flex-1 rounded-b-2xl p-6 md:p-8 lg:p-10 overflow-y-auto"
+        className="flex-1 rounded-b-2xl p-4 sm:p-8 lg:p-10 overflow-y-auto"
         style={{ background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)" }}
       >
         <div className="flex items-start justify-between gap-4 flex-wrap">
@@ -94,7 +94,7 @@ export default function ProjectCard({ project }) {
         </div>
 
         {githubUrl && (
-          <div className="mt-6 pt-5 border-t border-slate-800 flex items-center justify-between">
+          <div className="mt-6 pt-5 border-t border-slate-800 flex flex-col sm:flex-row gap-3 items-center justify-between text-center sm:text-left">
             <span className="text-xs text-slate-500">View full source, docs & setup instructions</span>
             <a
               href={githubUrl}

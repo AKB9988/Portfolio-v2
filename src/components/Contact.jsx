@@ -6,10 +6,15 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 export default function Contact() {
   const [copied, setCopied] = useState(false);
 
-  function handleCopyEmail() {
-    navigator.clipboard.writeText("bhattak.iiits.100@gmail.com");
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  async function handleCopyEmail() {
+    try {
+      await navigator.clipboard.writeText("bhattak.iiits.100@gmail.com");
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      
+      window.prompt("Copy this email address:", "bhattak.iiits.100@gmail.com");
+    }
   }
 
   return (

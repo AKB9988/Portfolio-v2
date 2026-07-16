@@ -27,7 +27,7 @@ export default function About() {
                     </p>
 
               
-                    <div className="flex justify-start gap-12 mt-10 pl-2">
+                    <div className="flex flex-wrap justify-start gap-6 sm:gap-12 mt-10 pl-2">
                         <div className="flex flex-col items-center gap-2">
                             <div className="w-16 h-16 rounded-2xl border-2 border-amber-400/40 flex items-center justify-center text-xl font-bold text-white shadow-inner bg-slate-900/30">
                                 5+
@@ -48,7 +48,7 @@ export default function About() {
                         </div>
                     </div>
 
-                    <div className="mt-10 grid grid-cols-2 gap-3">
+                    <div className="hidden md:grid md:grid-cols-2 gap-3 mt-10">
                         {[
                             { label: "Location",  value: "India" },
                             { label: "College",   value: "IIIT Sonepat" },
@@ -71,16 +71,16 @@ export default function About() {
                     <div className="flex items-center justify-between bg-[#0f172a] border-b border-slate-700 h-10 px-4 flex-shrink-0">
                         <div className="flex items-center gap-2">
                             <Terminal size={16} className="text-slate-300" />
-                            <span className="text-sm text-slate-300 font-medium">Windows PowerShell</span>
+                            <span className="text-xs sm:text-sm text-slate-300 font-medium"><span className="hidden sm:inline">Windows </span>PowerShell</span>
                         </div>
-                        <div className="flex items-center text-slate-400">
-                            <button className="w-10 h-10 hover:bg-slate-700 transition">&#9472;</button>
-                            <button className="w-10 h-10 hover:bg-slate-700 transition">&#9633;</button>
-                            <button className="w-10 h-10 hover:bg-red-600 hover:text-white transition">&#10005;</button>
+                        <div className="flex items-center text-slate-400" aria-hidden="true">
+                            <span className="w-10 h-10 flex items-center justify-center">&#9472;</span>
+                            <span className="w-10 h-10 flex items-center justify-center">&#9633;</span>
+                            <span className="w-10 h-10 flex items-center justify-center text-red-400">&#10005;</span>
                         </div>
                     </div>
 
-                    <div className="p-6 font-mono text-sm md:text-base leading-7 text-slate-300 overflow-x-auto flex-1">
+                    <div className="p-4 sm:p-6 font-mono text-xs sm:text-sm md:text-base leading-7 text-slate-300 overflow-x-auto flex-1">
 
                         <p><span className="text-blue-400">PS</span><span className="text-slate-500"> &gt; </span>whoami</p>
                         <p className="text-white">Abhishek Kumar Bhatt</p>
@@ -91,7 +91,7 @@ export default function About() {
                         <br />
 
                         <p><span className="text-blue-400">PS</span><span className="text-slate-500"> &gt; </span>ls skills</p>
-                        <p className="text-amber-400">Java&nbsp;&nbsp;Spring Boot&nbsp;&nbsp;React&nbsp;&nbsp;Android</p>
+                        <p className="text-amber-400">Java • Spring Boot • React  Android</p>
                         <br />
 
                         <p><span className="text-blue-400">PS</span><span className="text-slate-500"> &gt; </span>cat education.txt</p>
@@ -99,7 +99,7 @@ export default function About() {
                         <br />
 
                         <p><span className="text-blue-400">PS</span><span className="text-slate-500"> &gt; </span>cat interests.txt</p>
-                        <p className="text-pink-400">System Design&nbsp;&nbsp;Hackathons&nbsp;&nbsp;Competitive Programming</p>
+                        <p className="text-pink-400">System Design • Hackathons • Competitive Programming</p>
                         <br />
 
                         <p><span className="text-blue-400">PS</span><span className="text-slate-500"> &gt; </span>echo "Building products that make an impact."</p>

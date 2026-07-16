@@ -4,17 +4,17 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 
 const navItems = [
-  { label: "About",    href: "#about" },
-  { label: "Skills",   href: "#skills" },
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
-  { label: "Contact",  href: "#contact" },
+  { label: "Contact", href: "#contact" },
 ];
 
 
 const socialLinks = [
-  { icon: <FaGithub />,   href: "https://github.com/AKB9988",              label: "GitHub" },
-  { icon: <FaLinkedin />, href: "https://www.linkedin.com/in/abhishek-kumar-bhatt-37b801340/",     label: "LinkedIn" },
-  { icon: <FaEnvelope />, href: "mailto:bhattak.iiits.100@gmail.com",            label: "Email" },
+  { icon: <FaGithub />, href: "https://github.com/AKB9988", label: "GitHub" },
+  { icon: <FaLinkedin />, href: "https://www.linkedin.com/in/abhishek-kumar-bhatt-37b801340/", label: "LinkedIn" },
+  { icon: <FaEnvelope />, href: "mailto:bhattak.iiits.100@gmail.com", label: "Email" },
 ];
 
 export default function Navbar() {
@@ -41,12 +41,12 @@ export default function Navbar() {
     >
       <a
         href="#hero"
-        className="text-xl md:text-2xl font-extrabold whitespace-nowrap bg-gradient-to-r from-sky-400 via-teal-300 to-indigo-400 bg-clip-text text-transparent hover:opacity-85 transition-opacity"
+        className="font-signature text-xl md:text-2xl font-extrabold whitespace-nowrap bg-gradient-to-r from-sky-400 via-teal-300 to-indigo-400 bg-clip-text text-transparent hover:opacity-85 transition-opacity"
       >
-        Abhishek Bhatt
+        Abhishek Kumar Bhatt
       </a>
 
-      
+
       <ul className="hidden md:flex items-center gap-6">
         {navItems.map((item) => (
           <li key={item.label}>
@@ -60,7 +60,7 @@ export default function Navbar() {
         ))}
       </ul>
 
-   
+
       <div className="hidden md:flex items-center gap-2 text-xl text-indigo-200">
         {socialLinks.map((social) => (
           <a
@@ -76,14 +76,7 @@ export default function Navbar() {
         ))}
       </div>
 
-      {/* <a
-        href="#contact"
-        className="hidden md:flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-gradient-to-r from-sky-400 to-indigo-500 hover:from-sky-300 hover:to-indigo-400 text-white font-semibold shadow-md shadow-sky-500/10 hover:shadow-sky-500/20 active:scale-95 transition-all duration-300 text-sm cursor-pointer"
-      >
-        Say Hi
-      </a> */}
 
-    
       <button
         className="md:hidden rounded-full p-2 text-indigo-200 transition hover:bg-indigo-900/45 hover:text-sky-300"
         onClick={() => setIsOpen(!isOpen)}

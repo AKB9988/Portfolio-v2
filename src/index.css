@@ -1,1 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
+
 @import "tailwindcss";
+
+@theme {
+  --font-signature: "Allura", cursive;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+@keyframes splashSpin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes splashBar {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
+.splash-spin {
+  animation: splashSpin 12s linear infinite;
+}
+
+.splash-bar {
+  animation: splashBar 2.2s ease-out forwards;
+}

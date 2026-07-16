@@ -133,7 +133,7 @@ export default function Projects() {
         >
           <div className="flex items-center gap-2">
             <span style={{ fontSize: "13px" }}>{active.tabEmoji}</span>
-            <span className="text-slate-400 truncate max-w-xs" style={{ fontSize: "11px" }}>
+            <span className="text-slate-400 truncate max-w-[120px] sm:max-w-xs" style={{ fontSize: "11px" }}>
               {active.title} — Abhishek Bhatt
             </span>
           </div>
@@ -167,7 +167,7 @@ export default function Projects() {
           className="flex items-center gap-2 px-2 py-1.5"
           style={{ background: "#1e2440", borderBottom: "1px solid #2d3560" }}
         >
-          <div className="flex items-center gap-0 flex-shrink-0">
+          <div className="hidden sm:flex items-center gap-0 flex-shrink-0">
             <button
               className="p-1.5 text-slate-500 hover:text-slate-300 hover:bg-white/10 rounded transition-all duration-150"
               title="Back"
